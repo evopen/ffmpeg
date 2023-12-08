@@ -1,0 +1,52 @@
+.{
+    .name = "libffmpeg",
+    .version = "6.1.1-1",
+
+    .dependencies = .{
+        .libz = .{
+            .url = "https://github.com/andrewrk/libz/archive/6f1bcf921df0a3541a4efb65a5e0120cb0b3bb40.tar.gz",
+            .hash = "12209983b338d5734ac4df5a95cbc6e49e95adc116dba53c4c60db2e5ca80754efa8",
+        },
+
+        .libmp3lame = .{
+            .url = "https://github.com/andrewrk/libmp3lame/archive/3.100.1-1.tar.gz",
+            .hash = "12208266f77f17704c4087a88c679e684bbe741aef279e3eefe939f5452224f4f1f1",
+        },
+        .libvorbis = .{
+            .url = "https://github.com/andrewrk/libvorbis/archive/438c71545bf5bb205c30301caca6f16fb252d37d.tar.gz",
+            .hash = "1220b0364e9d6463831c4a315bb40463ad294a9ed96cc1ae5dd562ff490edd799b9c",
+        },
+        .libogg = .{
+            .url = "https://github.com/andrewrk/libogg/archive/6c2a602b4f6bee40f56a539bd00c77464ebe7d80.tar.gz",
+            .hash = "1220021cfa6e51c344055f233b460a6b1b329900c0240ac070c0871285735f957e5d",
+        },
+
+        // This is used to compile some assembly files into object files for x86.
+        // Without this, ffmpeg considers the build "crippled".
+        .nasm = .{
+            .url = "https://github.com/andrewrk/nasm/archive/7746f12810e80c537b190781f938e627e1eb2871.tar.gz",
+            .hash = "1220201c5be62217b2321525b20d498749ca03bf461d344fa3041a0c54353f4eef61",
+        },
+    },
+    .paths = .{
+        "COPYING.GPLv2",
+        "COPYING.GPLv3",
+        "COPYING.LGPLv2.1",
+        "COPYING.LGPLv3",
+        "LICENSE.md",
+        "README.md",
+        "build.zig",
+        "build.zig.zon",
+        "compat",
+        "config_components.h",
+        "doc",
+        "libavcodec",
+        "libavdevice",
+        "libavfilter",
+        "libavformat",
+        "libavutil",
+        "libpostproc",
+        "libswresample",
+        "libswscale",
+    },
+}
